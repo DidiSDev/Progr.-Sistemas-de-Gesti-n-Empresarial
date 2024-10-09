@@ -48,10 +48,14 @@ public class panelArriba extends JPanel{
 		caja=new JTextField();
 		caja.setPreferredSize(new Dimension(100,20));
 		combo=new JComboBox();
+		
+		añadirCosasAlCombo();
+		
 		combo.setPreferredSize(new Dimension(100,20));
 		spiner=new JSpinner();
 		spiner.setPreferredSize(new Dimension(100,20));
 		otros=new JPanel(new FlowLayout(FlowLayout.CENTER));
+		
 		
 		
 		otros.add(caja);
@@ -64,6 +68,15 @@ public class panelArriba extends JPanel{
 		JSeparator separador=new JSeparator();
 		
 	}
+
+	private void añadirCosasAlCombo() 
+	{
+		combo.addItem("Item 1");
+
+		combo.addItem("Item 2");
+
+		combo.addItem("Item 3");
+}
 
 	public JRadioButton getOpcion1() {
 		return opcion1;

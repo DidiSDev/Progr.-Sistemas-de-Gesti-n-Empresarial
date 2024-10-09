@@ -18,10 +18,20 @@ public class Ventana extends JFrame{
 		panelArriba =new panelArriba();
 		panelAbajo=new panelAbajo();
 		
-		this.getContentPane().add(panelArriba);
-		this.getContentPane().add(separador=new JSeparator());
-		this.getContentPane().add(panelAbajo);
 		
+		añadirPanelesVentana();
+		
+		hacerBotonesEscuchadores();
+		
+		
+		
+		
+		this.setVisible(true);
+	}
+
+	private void hacerBotonesEscuchadores() 
+	{
+		//LO HAGO DESDE VENTANA, ACCEDIENDO AL PANEL DIRECTAMENTE DESDE AQUÍ
 		panelArriba.getOpcion1().addActionListener(new escuchador(this));
 		panelArriba.getOpcion2().addActionListener(new escuchador(this));
 		panelArriba.getOpcion3().addActionListener(new escuchador(this));
@@ -31,10 +41,12 @@ public class Ventana extends JFrame{
 		panelArriba.getCaja().addActionListener(new escuchador(this));
 		panelArriba.getCombo().addActionListener(new escuchador(this));
 		panelArriba.getSpiner().addChangeListener(new escuchadorSpiner(this));
-		
-		
-		
-		
-		this.setVisible(true);
+	}
+
+	private void añadirPanelesVentana() 
+	{
+		this.getContentPane().add(panelArriba);
+		this.getContentPane().add(separador=new JSeparator());
+		this.getContentPane().add(panelAbajo);		
 	}
 }
