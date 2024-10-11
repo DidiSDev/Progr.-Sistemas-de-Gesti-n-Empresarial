@@ -182,6 +182,14 @@ public class panelIzq extends JPanel {
 		
 	}
 	
+	public void mostrarPalabraAlPerder()
+	{
+		contenedorPalabra.setText(palabra.getPalabraElegida());
+		panelTit1.add(contenedorPalabra);
+		
+		
+	}
+	
 	private void cantidadBarrasBajas()
 	{
 		

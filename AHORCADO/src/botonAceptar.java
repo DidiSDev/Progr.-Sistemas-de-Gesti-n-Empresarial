@@ -106,6 +106,10 @@ public class botonAceptar implements ActionListener {
 						ventana.getPanelIzq().getAceptar().setEnabled(false);
 						//TAMBIEN MUESTRO MENSAJE DE DEMASIADOS INTENTOS FALLIDOS:
 						ventana.getPanelIzq().mostrarGameOver();
+						
+						//AL TERMINAR EL JUEGO MUESTRO LA PALABRA
+						
+						ventana.getPanelIzq().mostrarPalabraAlPerder();
 					}
 				}	
 				
